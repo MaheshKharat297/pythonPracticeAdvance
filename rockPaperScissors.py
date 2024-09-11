@@ -11,6 +11,8 @@ def result(hand1, hand2):
         print(f"Hand 1 having {hand1} is the winner!!")
     elif hand1 == "paper" and hand2 == "scissors":
         print(f"Hand 2 having {hand2} is the winner!!")
+    elif hand1 == hand2:
+        print("Its a draw !!!!")
     else:
         print("Invalid values !!")
 
