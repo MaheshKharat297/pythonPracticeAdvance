@@ -1,5 +1,6 @@
+import os
+
 def bidder_info(name, bid_amt):
-    bidders_dic = {}
     bidders_dic[name] = bid_amt
     return bidders_dic
 
@@ -19,19 +20,22 @@ def ask_bidder_info():
     return bidders_dic
 
 if __name__ == "__main__":
+    print("*************Welcome to the Secret Auction Program*************")
     bidders_dic = {}
     flag = True
     while flag == True:
         bidders_dic = ask_bidder_info()
-        ans = input("Are there any other bidders Yes/No:")
+        ans = input("Are there any other bidders Yes/No:").lower()
 
-        if ans == "Yes":
+        if ans == "yes":
             flag = True
-        elif ans == "No":
+            os.system("cls")
+        elif ans == "no":
             print("Thank you !")
             flag = False
         else:
             print("Invalid input !")
 
+    print("All bidders list :", bidders_dic)
     winner = find_winner(bidders_dic)
     print(f"The winner is : {winner}")
