@@ -3,7 +3,7 @@ from math import ceil
 def no_of_cans(wall_height, wall_width, coverage):
 
     area = wall_width*wall_height
-    print(area / coverage)
+    #print(area / coverage)
     cans = ceil(area / coverage)
 
     return cans
