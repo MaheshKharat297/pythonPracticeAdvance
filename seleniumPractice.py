@@ -9,7 +9,7 @@ browsers = ["Chrome", "Firefox"]
 for browser in browsers:
     if browser == "Chrome":
         driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-    elif browser == "Fir efox":
+    elif browser == "Firefox":
         driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
 
     driver.get("https://www.google.com/")

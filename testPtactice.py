@@ -7,6 +7,8 @@
 #
 # driver.get("www.google.com")
 # driver.implicitly_wait(10)
+from datetime import datetime
+
 
 # def uniq_find(lst):
 #     for i in lst:
@@ -40,6 +42,9 @@ def max_find(lst):
 
 lst = [4,5,4,2,3,1,0,5,3,10]
 max_find(lst)
+
+now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+print(now)
 
 
 
