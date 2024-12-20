@@ -17,7 +17,6 @@ def prime_check(x, y):
                     prim_lst.append(i)
     return prim_lst
 
-
 start = 2
 end = 7
 prim_lst = prime_check(start, end)
@@ -264,16 +263,21 @@ count_match(str1, str2)
 
 ###Print least frequency characters
 def fequcy_count(str):
-    least = []
     str_st = list(set(str))
+    dic1 = {}
     for s in str_st:
         x = str.count(s)
-        if x < 2:
-            least.append(s)
-    print("Least fequncy chars are :", least)
-
-
-test_str = "GeeksforGeeks"
+        dic1[s] = x
+    print(dic1)
+    dic1_keys = dic1.keys()
+    dic1_values = dic1.values()
+    mi = min(dic1_values)
+    least = []
+    for i in dic1_keys:
+        if dic1[i] == mi:
+            least.append(i)
+    print("The least chars are :", least)
+test_str = "GeeksforrGeeks"
 fequcy_count(test_str)
 #** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** ** **
 

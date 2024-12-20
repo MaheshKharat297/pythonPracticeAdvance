@@ -16,3 +16,5 @@ for browser in browsers:
     time.sleep(5)
     driver.maximize_window()
     driver.close()
+
+#

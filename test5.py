@@ -1,15 +1,20 @@
-def count_match(str1, str2):
-    count = 0
-    match_lst = []
-    for s in str1.lower():
-        if s in str2.lower() and s not in match_lst:
-            count = count + 1
-            match_lst.append(s)
-    print("Count of match is :", count)
-    print("list of matching chars are :", match_lst)
+import time
+import math
 
-str1 = 'abcdefdK'
-str2 = 'abklpwowiwc'
-count_match(str1, str2)
+def calculate_time(func):
+    def inner_1(*args, **kwargs):
+        start = time.time()
+        func(*args, **kwargs)
+        end = time.time()
+
+        print("The time required for the execution is :", end - start)
+
+    return inner_1
+
+@calculate_time
+def factorial(num):
+    time.sleep(2)
+    print("This is factorial of given number : ", math.factorial(num))
 
 
+factorial(10)
